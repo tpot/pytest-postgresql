@@ -48,7 +48,7 @@ def _pg_exe(executable: Optional[str], config: PostgresqlConfigDict) -> str:
             ).strip()
         except FileNotFoundError as ex:
             raise ExecutableMissingException(
-                "Could not found pg_config executable. Is it in systenm $PATH?"
+                "Could not found pg_config executable. Is it in system $PATH?"
             ) from ex
         postgresql_ctl = os.path.join(pg_bindir, "pg_ctl")
     return postgresql_ctl
